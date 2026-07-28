@@ -1,4 +1,6 @@
 import 'package:demoaflokkat/classes/etudiant.dart';
+import 'package:demoaflokkat/classes/utilisateur.dart';
+import 'package:demoaflokkat/widgets/profil_widget.dart';
 import 'package:demoaflokkat/widgets/salutation_widget.dart';
 import 'package:demoaflokkat/widgets/compteur_widget.dart';
 import 'package:flutter/material.dart';
@@ -17,26 +19,23 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     
-    return const MaterialApp(
+    return  MaterialApp(
+      themeMode: ThemeMode.system,
+      theme: ThemeData(
+       colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF179AAF)),
+        useMaterial3: true,
+      ),
+      darkTheme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF179AAF), brightness: Brightness.dark),
+        useMaterial3: true,
+      ),
       home: Scaffold(
-        body: SalutationWidget(nom: 'Alice', etudiants: [
-      Etudiant(nom: 'Marc\'Antoine', moyenne: 15.0),
-      Etudiant(nom: 'Jean-Michel', moyenne: 18.0),
-      Etudiant(nom: 'Mario', moyenne: 18.0),
-      Etudiant(nom: 'David', moyenne: 18.0),
-      Etudiant(nom: 'Swann', moyenne: 18.0),
-      Etudiant(nom: 'Dorian', moyenne: null),
-      Etudiant(nom: 'Badr', moyenne: 18.0),
-      Etudiant(nom: 'Alexis', moyenne: 19.0),
-      Etudiant(nom: 'Marc\'Antoine', moyenne: 15.0),
-      Etudiant(nom: 'Jean-Michel', moyenne: 18.0),
-      Etudiant(nom: 'Mario', moyenne: 18.0),
-      Etudiant(nom: 'David', moyenne: 18.0),
-      Etudiant(nom: 'Swann', moyenne: 18.0),
-      Etudiant(nom: 'Dorian', moyenne: null),
-      Etudiant(nom: 'Badr', moyenne: 18.0),
-      Etudiant(nom: 'Alexis', moyenne: 19.0),
-    ]),
+        body: ProfilWidget(utilisateur: Utilisateur(
+          nom: 'John Doe',
+          role: 'Admin',
+          email: 'john.doe@example.com',
+          avatar: 'https://www.w3schools.com/howto/img_avatar.png'
+        ))
       ),
     );
   }

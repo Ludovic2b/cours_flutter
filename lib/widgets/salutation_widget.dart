@@ -1,11 +1,10 @@
 import 'package:demoaflokkat/classes/etudiant.dart';
 import 'package:flutter/material.dart';
 
-class SalutationWidget extends StatelessWidget {
-  final String nom;
+class ListeEtudiants extends StatelessWidget {
   final List<Etudiant> etudiants;
 
-  const SalutationWidget({required this.nom, required this.etudiants, super.key});
+  const ListeEtudiants({required this.etudiants, super.key});
 
   @override
   Widget build(BuildContext context) {
