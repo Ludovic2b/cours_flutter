@@ -15,6 +15,7 @@ class Etudiant{
 
   static Future<List<Etudiant>> chargerEtudiants() async {
     await Future.delayed(const Duration(seconds: 2));
+    // throw Exception('Erreur lors du chargement des étudiants');
     return [
       Etudiant(nom: 'Marc\'Antoine', moyenne: 15.0),
       Etudiant(nom: 'Jean-Michel', moyenne: 18.0),

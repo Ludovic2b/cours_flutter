@@ -1,9 +1,12 @@
 import 'package:demoaflokkat/classes/etudiant.dart';
 import 'package:demoaflokkat/classes/utilisateur.dart';
+import 'package:demoaflokkat/widgets/compteur_widget_riverpod.dart';
+import 'package:demoaflokkat/widgets/liste_etudiant_widget.dart';
 import 'package:demoaflokkat/widgets/profil_widget.dart';
 import 'package:demoaflokkat/widgets/salutation_widget.dart';
 import 'package:demoaflokkat/widgets/compteur_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 
 Future<void> main() async {
@@ -32,12 +35,13 @@ class _MainAppState extends State<MainApp> {
   @override
   Widget build(BuildContext context) {
 
-    return  MaterialApp(
-      themeMode: _themeMode,
-      theme: ThemeData(
-       colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF179AAF)),
-        useMaterial3: true,
-      ),
+    return  ProviderScope(
+      child: MaterialApp(
+        themeMode: _themeMode,
+        theme: ThemeData(
+         colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF179AAF)),
+          useMaterial3: true,
+        ),
       darkTheme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF179AAF), brightness: Brightness.dark),
         useMaterial3: true,
@@ -52,13 +56,8 @@ class _MainAppState extends State<MainApp> {
             ),
           ],
         ),
-        body: ProfilWidget(utilisateur: Utilisateur(
-          nom: 'John Doe',
-          role: 'Admin',
-          email: 'john.doe@example.com',
-          avatar: 'https://www.w3schools.com/howto/img_avatar.png'
-        ))
+        body: ListeEtudiantWidget(),
       ),
-    );
+    ));
   }
 }
