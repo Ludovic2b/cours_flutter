@@ -1,17 +1,12 @@
 import 'package:demoaflokkat/classes/etudiant.dart';
-import 'package:demoaflokkat/classes/utilisateur.dart';
-import 'package:demoaflokkat/widgets/compteur_widget_riverpod.dart';
-import 'package:demoaflokkat/widgets/liste_etudiant_widget.dart';
-import 'package:demoaflokkat/widgets/profil_widget.dart';
-import 'package:demoaflokkat/widgets/salutation_widget.dart';
-import 'package:demoaflokkat/widgets/compteur_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:demoaflokkat/widgets/liste_tache.dart';
 
 
 Future<void> main() async {
   final etudiants = await Etudiant.chargerEtudiants();
-  runApp(MainApp(etudiants: etudiants));
+  runApp(ProviderScope(child:MainApp(etudiants: etudiants)));
 }
 
 class MainApp extends StatefulWidget {
@@ -35,8 +30,8 @@ class _MainAppState extends State<MainApp> {
   @override
   Widget build(BuildContext context) {
 
-    return  ProviderScope(
-      child: MaterialApp(
+    return  
+      MaterialApp(
         themeMode: _themeMode,
         theme: ThemeData(
          colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF179AAF)),
@@ -56,8 +51,8 @@ class _MainAppState extends State<MainApp> {
             ),
           ],
         ),
-        body: ListeEtudiantWidget(),
+        body: const ListTachesWidget(),
       ),
-    ));
+    );
   }
 }
