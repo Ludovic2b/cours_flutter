@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:demoaflokkat/meteo/presentation/pages/meteo_page.dart';
 
-void main() => runApp(const MeteoApp());
+//void main() => runApp(const MeteoApp());
 
 class MeteoApp extends StatelessWidget {
   const MeteoApp({super.key});
