@@ -53,6 +53,13 @@
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Blabla</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Blabla</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Blabla</string>
+	
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
@@ -66,5 +73,21 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<!-- Put me in the [my_project]/ios/Runner/Info.plist file -->
+<!-- Google Sign-in Section -->
+<key>CFBundleURLTypes</key>
+<array>
+  <dict>
+    <key>CFBundleTypeRole</key>
+    <string>Editor</string>
+    <key>CFBundleURLSchemes</key>
+    <array>
+      <!-- TODO Replace this value: -->
+      <!-- Copied from GoogleService-Info.plist key REVERSED_CLIENT_ID -->
+      <string>com.googleusercontent.apps.646814601878-ku3deldhecprivelj4u3l5egm5jn0v1u</string>
+    </array>
+  </dict>
+</array>
+<!-- End of the Google Sign-in Section -->
 </dict>
 </plist>

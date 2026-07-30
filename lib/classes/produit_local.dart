@@ -7,6 +7,14 @@ class ProduitLocal {
   Id id = Isar.autoIncrement;
   @Index() late String nom;
   late double prix;
+
+  ProduitLocal();
+
+  factory ProduitLocal.fromJson(Map<String, dynamic> json) {
+    return ProduitLocal()
+      ..nom = json['nom'] as String
+      ..prix = (json['prix'] as num).toDouble();
+  }
 }
 
 
