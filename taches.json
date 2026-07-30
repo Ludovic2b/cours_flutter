@@ -1,0 +1,92 @@
+[
+  {
+    "id": "1",
+    "titre": "Allumer VsCode",
+    "description": "Pour commencer à coder, il faut allumer VsCode",
+    "categorie": "Travail",
+    "date_creation": "2023-06-01",
+    "date_echeance": "2023-06-02",
+    "est_complete": false
+  },
+  {
+    "id": "2",
+    "titre": "Faire du yoga",
+    "description": "Pour se détendre, il faut faire du yoga",
+    "categorie": "Santé",
+    "date_creation": "2023-06-01",
+    "date_echeance": "2023-06-03",
+    "est_complete": false
+  },
+  {
+    "id": "3",
+    "titre": "Faire du sport",
+    "description": "Pour rester en forme, il faut faire du sport",
+    "categorie": "Santé",
+    "date_creation": "2023-06-01",
+    "date_echeance": "2023-06-04",
+    "est_complete": false
+  },
+  {
+    "id": "4",
+    "titre": "Peser ses mots",
+    "description": "Pour ne pas blesser les autres, il faut peser ses mots",
+    "categorie": "Communication",
+    "date_creation": "2023-06-01",
+    "date_echeance": "2023-06-05",
+    "est_complete": false
+  },
+  {
+    "id": "5",
+    "titre": "Faire les courses",
+    "description": "Acheter des légumes, du pain et du lait",
+    "categorie": "Maison",
+    "date_creation": "2023-06-02",
+    "date_echeance": "2023-06-06",
+    "est_complete": true
+  },
+  {
+    "id": "6",
+    "titre": "Réviser Flutter",
+    "description": "Relire le cours sur les widgets et l'architecture Clean",
+    "categorie": "Travail",
+    "date_creation": "2023-06-02",
+    "date_echeance": "2023-06-07",
+    "est_complete": false
+  },
+  {
+    "id": "7",
+    "titre": "Appeler le dentiste",
+    "description": "Prendre rendez-vous pour un contrôle",
+    "categorie": "Santé",
+    "date_creation": "2023-06-03",
+    "date_echeance": "2023-06-08",
+    "est_complete": false
+  },
+  {
+    "id": "8",
+    "titre": "Ranger le bureau",
+    "description": "Trier les papiers et nettoyer le poste de travail",
+    "categorie": "Maison",
+    "date_creation": "2023-06-03",
+    "date_echeance": "2023-06-09",
+    "est_complete": true
+  },
+  {
+    "id": "9",
+    "titre": "Lire un livre",
+    "description": "Avancer d'au moins deux chapitres",
+    "categorie": "Loisir",
+    "date_creation": "2023-06-04",
+    "date_echeance": null,
+    "est_complete": false
+  },
+  {
+    "id": "10",
+    "titre": "Préparer la présentation",
+    "description": "Finaliser les slides pour la réunion d'équipe",
+    "categorie": "Travail",
+    "date_creation": "2023-06-04",
+    "date_echeance": "2023-06-10",
+    "est_complete": false
+  }
+]
