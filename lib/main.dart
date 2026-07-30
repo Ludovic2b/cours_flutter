@@ -1,10 +1,15 @@
 import 'package:demoaflokkat/classes/etudiant.dart';
-import 'package:demoaflokkat/tache/presentation/widgets/liste_tache_widget.dart';
+import 'package:demoaflokkat/widgets/liste_article_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-
+import 'package:supabase_flutter/supabase_flutter.dart';
 Future<void> main() async {
   final etudiants = await Etudiant.chargerEtudiants();
+  WidgetsFlutterBinding.ensureInitialized();
+  await Supabase.initialize(
+    url: 'https://laezdlvhdkmmaozyatwo.supabase.co',
+    publishableKey: 'sb_publishable_e1UQOgYHc7Yky446PkRGxQ_xitpnvoU',
+  );
   runApp(ProviderScope(child: MainApp(etudiants: etudiants)));
 }
 
@@ -51,7 +56,7 @@ class _MainAppState extends State<MainApp> {
             ),
           ],
         ),
-        body: const ListTachesWidget(),
+        body: const ListeArticleWidget(),
       ),
     );
   }
